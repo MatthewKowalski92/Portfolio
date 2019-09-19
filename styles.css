@@ -50,8 +50,107 @@ li a:hover {
 }
 main {
   max-width: 110rem;
-  min-height: calc(100vh-14.5rem);
+  min-height: calc(100vh-14rem);
   margin: 0 auto;
   padding: 0 1.5rem;
   text-align: center;
+}
+.weather {
+  height: 15rem;
+  width: 30rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 0.5rem solid #4267b2;
+  border-radius: 2rem;
+}
+.weather-conditions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-size: 4rem;
+  padding: 2rem;
+}
+h2 {
+  padding: 1rem;
+}
+h3 {
+  padding-bottom: 1rem;
+}
+.profile-photo {
+  width: 25rem;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.5rem solid transparent;
+  box-shadow: 0 0 0.5rem 0.5rem #4267b2;
+}
+.toggle-background {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  background: #4267b2;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+}
+.toggle-background:focus {
+  box-shadow: 0 0 0 0.2rem #bc243c;
+}
+.toggle-background:hover {
+  background: #29487d;
+  cursor: pointer;
+}
+#description > div {
+  margin-top: 2rem;
+}
+footer {
+  margin-top: 4rem;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.loader {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 1rem solid #d3d3d3;
+  border-top: 1rem solid #4267b2;
+  margin: auto;
+  margin-top: 1rem;
+  animation: spinner 2s infinite linear;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  li a {
+    padding: 2rem 5rem;
+  }
+  #description {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #description > div {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .weather {
+    min-height: 15.5rem;
+    width: 20rem;
+    position: absolute;
+    right: 0;
+  }
 }
